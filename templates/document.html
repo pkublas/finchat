@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>Document</title>
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+</head>
+<body>
+    <a href="/">All Documents</a>
+    <section>
+        <h1>id: {{ document.id }}</h1>
+        <h3>pre_text: {{ document.pre_text }}</h3>
+        <h3>post_text: {{ document.post_text }}</h3>
+        <h3>table: {{ document.table }}</h3>
+        <h3>table_ori: {{ document.table_ori }}</h3>
+        <h3>question: {{ document.question }}</h3>
+        <h3>answer: {{ document.answer }}</h3>
+    </section>
+    <section>
+        <h2>Chat</h2>
+        <input name="Question" type="text">
+        <button name="Submit">Submit</button>
+    </section>
+</body>
+</html>

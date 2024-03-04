@@ -1,0 +1,13 @@
+<html>
+<head>
+    <title>Documents</title>
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+</head>
+<body>
+    <ul>
+        {% for id in documents %}
+            <li><a href="{{ url_for('read_document', id=id) }}">{{ id }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
