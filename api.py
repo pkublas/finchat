@@ -1,10 +1,11 @@
-from fastapi import FastAPI, Request
+from fastapi import FastAPI
 
 from services import read_data
 
 app = FastAPI()
 
 documents = read_data("data/train.json")
+
 
 
 @app.get("/document/")
@@ -14,7 +15,7 @@ async def read_document(id: str):
 
 
 @app.get("/table")
-async def read_table(id: str, name: str | None = "table_ori"):
+async def read_table(id: str, name: str | None = "table"):
     document = documents.get(id)
     table = document.get(name)
     pre_text = document.get("pre_text")
