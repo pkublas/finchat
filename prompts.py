@@ -10,6 +10,8 @@ class PromptingStrategy(ABC):
         pass
 
 
+
+
 class PromptWithFewShots(PromptingStrategy):
     def get_prompt(self):
         examples = [
@@ -91,7 +93,7 @@ class PromptAWithAPIDocs(PromptingStrategy):
         )
 
 
-class PromptStepBySpteInstructions(PromptingStrategy):
+class PromptStepByStepInstructions(PromptingStrategy):
 
     def get_prompt(self):
         return ChatPromptTemplate.from_messages(
@@ -99,10 +101,48 @@ class PromptStepBySpteInstructions(PromptingStrategy):
                 (
                     "system",
                     """
-                    Your task is to provide a step-by-step instructions on how to answer a user's question quoted in triple backticks.
+                    Your task is to analyse user's question and provide a step-by-step instructions on how to resolve it.
                     In order to do it, first, retrieve required data from the API using a query string parameter of id={document_id}
                     """,
                 ),
                 ("human", "```{question}```"),
+            ]
+        )
+
+
+class PromptGeneratePseudoCode(PromptingStrategy):
+
+    def get_prompt(self):
+        return ChatPromptTemplate.from_messages(
+            [
+                (
+                    "system",
+                    """
+                    Your task is to 
+                    1) retrieve required data from the API using a query string parameter of id={document_id}
+                    2) analyse user's question quoted in triple backticks below
+                    3) write pseudo code in Python to answer user's question
+                    """,
+                ),
+                ("human", "```{question}```"),
+            ]
+        )
+
+
+class PromptExecutePseudoCode(PromptingStrategy):
+    def get_prompt(self):
+        return ChatPromptTemplate.from_messages(
+            [
+                (
+                    "system",
+                    """
+                    Your task is to 
+                    1) retrieve required data from the API using a query string parameter of id={document_id}
+                    2) follow pseudo code provided below ste-by-step 
+                    3) answer the user question quoted in triple backticks below.
+                    """,
+                ),
+                ("ai", "{pseudo_code}"),
+                ("human", "```{question}```")
             ]
         )

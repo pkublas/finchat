@@ -7,7 +7,6 @@ app = FastAPI()
 documents = read_data("data/train.json")
 
 
-
 @app.get("/document/")
 async def read_document(id: str):
     document = documents.get(id)

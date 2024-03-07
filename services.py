@@ -1,9 +1,13 @@
-from langchain.chains import APIChain
+from langchain.chains import APIChain, LLMChain
 from langchain.chains.api import open_meteo_docs
 from langchain_openai import OpenAI
+
 import dotenv
 import json
 
+from langchain_core.prompts import PromptTemplate
+
+from llms import LLMStrategy
 from prompts import PromptingStrategy
 
 LOCAL_API_DOCS = """
@@ -17,6 +21,11 @@ Query string parameters:
 Name    Required    Description
 id  yes identifies a document where to load a data from
 
+API response includes the following fields:
+Name    Description
+table   tabular view of the financial data
+pre_text    text that appears before the table in a document, describing what is a a table
+post_text   a text that appears after the table in a document, providing analysis of the data in a table
 """
 
 dotenv.load_dotenv()
@@ -57,16 +66,13 @@ def get_weather(location):
     chain.invoke(f"What is the weather like right now in {location}?")
 
 
-def get_local_chain(llm_strategy=None, domains=None, verbose=True):
+def get_api_chain(llm_strategy: LLMStrategy, domains=None, verbose=True):
 
     _domains = ["http://127.0.0.1:8001/"]
-    _llm = OpenAI(temperature=0)
+    _llm = llm_strategy.get_llm()
 
     if domains:
         _domains = domains
-
-    if llm_strategy:
-        _llm = llm_strategy
 
     return APIChain.from_llm_and_api_docs(
         llm=_llm,
@@ -76,7 +82,21 @@ def get_local_chain(llm_strategy=None, domains=None, verbose=True):
     )
 
 
-def get_answer(prompt_strategy: PromptingStrategy, chain, document_id, question):
+def get_llm_chain(llm_strategy: LLMStrategy):
+    _llm = llm_strategy.get_llm()
+    prompt_template = "You are helpful assistant solving {type_of_problem} problems."
+    prompt = PromptTemplate(
+        input_variables=["type_of_problem"], template=prompt_template
+    )
+    return LLMChain(llm=_llm, prompt=prompt)
+
+
+def get_prompt(prompt_strategy: PromptingStrategy, **args):
     prompt = prompt_strategy.get_prompt()
-    print(prompt.format(document_id=document_id, question=question))
-    return chain.invoke(prompt.format(document_id=document_id, question=question))
+    prompt_formatted = prompt.format(**args)
+    return prompt_formatted
+
+
+def get_answer(chain, prompt):
+    print(f"prompt: {prompt}")
+    return chain.invoke(prompt)
