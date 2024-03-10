@@ -58,5 +58,6 @@ answer = chain.invoke(
     }
 )
 
-print(json.dumps(answer, indent=4))
-print(answer.get('output_text'))
+print(answer)
+# print(json.dumps(answer, indent=4))
+# print(answer.get('output_text'))

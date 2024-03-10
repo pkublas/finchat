@@ -21,7 +21,7 @@ prompt = PromptTemplate.from_template(
 )
 
 llm = OpenAI()
-llm_math = LLMMathChain.from_llm(llm=llm)
+llm_math = LLMMathChain.from_llm(llm=llm, verbose=True)
 
 # document_id = "Single_JKHY_2009_page_28.pdf-3"
 document_id = "Single_HIG_2004_page_122.pdf-2"
@@ -32,11 +32,16 @@ with urlopen(f"http://127.0.0.1:8001/table?id={document_id}") as f:
 answer = llm_math.invoke(
     input={
         "question": documents.get(document_id).get("question"),
-        "context": data,
-        "total_obligations_next3years": 100,
-        "total_obligations": 5
+        "context": data
     }
 )
+
+# answer = llm_math.invoke(
+#     input={
+#         "question": "what is the ratio of revenue between years 2008 and 2009",
+#         "context": "revenue in year 2008 was 100, and in 2009 78"
+#     }
+# )
 
 print(json.dumps(answer, indent=4))
 print(answer.get('output_text'))

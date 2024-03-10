@@ -39,6 +39,8 @@ def read_data(file="data/train.json"):
 
         for record in data:
             document_id = record.get("id").replace("/", "_")
+            if not record.get("qa", {}).get("question"):
+                continue
             if document_id not in documents:
                 documents[document_id] = {
                     "id": document_id,
@@ -100,3 +102,14 @@ def get_prompt(prompt_strategy: PromptingStrategy, **args):
 def get_answer(chain, prompt):
     print(f"prompt: {prompt}")
     return chain.invoke(prompt)
+
+
+def get_data(documents, document_id):
+    data_table = documents.get(document_id).get("table")
+    data_pre_text = ";".join(documents.get(document_id).get("pre_text"))
+    data_post_text = ";".join(documents.get(document_id).get("post_text"))
+    return f"{data_pre_text}\n{data_table}\n{data_post_text}"
+
+
+def get_table(documents, document_id):
+    return documents.get(document_id).get("table")
