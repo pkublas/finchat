@@ -19,8 +19,4 @@ async def read_table(id: str, name: str | None = "table"):
     table = document.get(name)
     pre_text = document.get("pre_text")
     post_text = document.get("post_text")
-    return {
-        "table": table,
-        "pre_text": pre_text,
-        "post_text": post_text
-    }
+    return {"table": table, "pre_text": pre_text, "post_text": post_text}

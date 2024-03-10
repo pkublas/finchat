@@ -4,7 +4,6 @@ from langchain_core.prompts import PromptTemplate
 
 
 class FinancialAnalysisChainOneShot(LLMChain):
-    description = "One shot agent which takes a question and data in a context to provide an answer"
 
     @classmethod
     def from_llm(cls, llm: BaseLLM, verbose: bool = True) -> LLMChain:
@@ -17,30 +16,38 @@ class FinancialAnalysisChainOneShot(LLMChain):
         """
 
         prompt = PromptTemplate(
-            template=analysis_prompt, input_variables=["data", "question"]
+            template=analysis_prompt, input_variables=["question", "data"]
         )
 
         return cls(prompt=prompt, llm=llm, verbose=verbose)
 
 
 class FinancialAnalysisChainWithHistory(LLMChain):
-    description = (
-        "The agent is working in 3 stages,"
-        "first by splitting a questions into several smaller ones"
-        "and keeping the history of conversation through the conversation."
-    )
 
     @classmethod
     def from_llm(cls, llm: BaseLLM, verbose: bool = True) -> LLMChain:
         analysis_prompt = """You work as financial analyst helping your company understand financial report.
 When asked about ratio, proportion, or change, you must provide your answer using percentage value.
+You must validate your answers using code.
 {context}
 Conversation history:
 {conversation_history}
         """
 
-        prompt = PromptTemplate(
-            template=analysis_prompt, input_variables=["data", "question"]
-        )
+        prompt = PromptTemplate(template=analysis_prompt, input_variables=["context", "conversation_history"])
+
+        return cls(prompt=prompt, llm=llm, verbose=verbose)
+
+
+class FinancialAnalysisChainWithCode(LLMChain):
+    @classmethod
+    def from_llm(cls, llm: BaseLLM, verbose: bool = True) -> LLMChain:
+        analysis_prompt = """You are Python developer working with financial data.
+You must validate your answers using Python's numexpr expression.
+When asked about ratio, proportion, or change, you must provide your answer using percentage value.
+{context}
+        """
+
+        prompt = PromptTemplate(template=analysis_prompt, input_variables=["context"])
 
         return cls(prompt=prompt, llm=llm, verbose=verbose)
