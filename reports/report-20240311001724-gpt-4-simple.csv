@@ -1,0 +1,77 @@
+document_id,question,expected_answer,actual_answer,result,error,processing_duration_in_sec
+Single_JKHY_2009_page_28.pdf-3,what was the percentage change in the net cash from operating activities from 2008 to 2009,14.1%,"The net cash from operating activities in 2008 was $181,001 and in 2009 it was $206,588. The percentage change from 2008 to 2009 is calculated as follows:
+
+((206,588 - 181,001) / 181,001) * 100 = 14.13%
+
+So, the percentage change in the net cash from operating activities from 2008 to 2009 was approximately 14.13%.",OK,,3
+Single_RSG_2008_page_114.pdf-2,what was the percent of the growth in the revenues from 2007 to 2008,1.3%,"The revenue in 2007 was $9244.9 million and in 2008 it was $9362.2 million. The growth in revenue from 2007 to 2008 can be calculated as follows:
+
+Growth = (Revenue in 2008 - Revenue in 2007) / Revenue in 2007 * 100%
+
+Growth = ($9362.2 million - $9244.9 million) / $9244.9 million * 100% = 1.27%
+
+So, the growth in the revenues from 2007 to 2008 was 1.27%.",WRONG,Answers are different,3
+Single_AAPL_2002_page_23.pdf-1,what was the percentage change in net sales from 2000 to 2001?,-32%,"The net sales in 2000 were $7983 million and in 2001 were $5363 million. 
+
+The percentage change in net sales from 2000 to 2001 can be calculated as follows:
+
+[(Net sales in 2001 - Net sales in 2000) / Net sales in 2000] * 100
+
+= [($5363 - $7983) / $7983] * 100
+
+= -$2620 / $7983 * 100
+
+= -32.82%
+
+So, the percentage change in net sales from 2000 to 2001 was -32.82%, indicating a decrease in net sales.",WRONG,Answers are different,4
+Single_UPS_2009_page_33.pdf-2,what was the difference in percentage cumulative return on investment for united parcel service inc . compared to the s&p 500 index for the five year period ended 12/31/09?,-26.16%,"The cumulative return on investment for United Parcel Service Inc. at the end of the five-year period on 12/31/09 was $75.95, starting from an investment of $100.00 on 12/31/04. This represents a decrease of 24.05%.
+
+The cumulative return on investment for the S&P 500 index at the end of the same five-year period was $102.11, starting from an investment of $100.00 on 12/31/04. This represents an increase of 2.11%.
+
+Therefore, the difference in percentage cumulative return on investment for United Parcel Service Inc. compared to the S&P 500 index for the five-year period ended 12/31/09 is 26.16% (24.05% decrease for UPS compared to 2.11% increase for S&P 500).",WRONG,Answers are different,5
+Single_CE_2010_page_134.pdf-2,what portion of the total shares subject to outstanding awards is under the 2009 global incentive plan?,70.1%,"The portion of the total shares subject to outstanding awards under the 2009 global incentive plan is 2,530,454 shares.",WRONG,unable to extract decimal,1
+Single_JPM_2013_page_104.pdf-2,what was the percentage increase in litigation reserves in 2012?,15.6%,"The litigation reserves increased from $3.2 billion in 2011 to $3.7 billion in 2012. To calculate the percentage increase, we subtract the old value from the new value, divide by the old value and then multiply by 100. 
+
+So, the percentage increase in litigation reserves in 2012 is (($3.7 billion - $3.2 billion) / $3.2 billion) * 100 = 15.625%.",OK,,3
+Single_HIG_2004_page_122.pdf-2,what portion of total obligations are due within the next 3 years?,22.99%,"The total obligations due within the next 3 years can be calculated by adding the obligations due in less than 1 year and those due in 1-3 years. From the table, the obligations due in less than 1 year amount to $27,729 and those due in 1-3 years amount to $45,161. Therefore, the total obligations due within the next 3 years amount to $72,890. 
+
+The total obligations of the company are $317,105. Therefore, the portion of total obligations due within the next 3 years is $72,890 / $317,105 = 0.23 or 23%.",OK,,3
+Single_SLG_2013_page_133.pdf-4,"for the years ended december 31 , 2013 , 2012 and 2011 , what was the total in millions capitalized to assets associated with compensation expense related to long-term compensation plans , restricted stock and stock options?\\n",12,"For the years ended December 31, 2013, 2012, and 2011, the total in millions capitalized to assets associated with compensation expense related to long-term compensation plans, restricted stock, and stock options was approximately $4.5 million, $4.1 million, and $3.4 million, respectively.",WRONG,unable to extract decimal,2
+Single_ETR_2008_page_336.pdf-3,what is the percent change in net revenue between 2007 and 2008?,2.4%,"The net revenue in 2007 was $486.9 million and in 2008 it was $498.8 million. The percent change in net revenue between 2007 and 2008 can be calculated as follows:
+
+[(498.8 - 486.9) / 486.9] * 100 = 2.44%
+
+So, the percent change in net revenue between 2007 and 2008 is approximately 2.44%.",OK,,2
+Single_BKR_2017_page_105.pdf-2,"what portion of the authorized shares of class b common stock is outstanding as of december 31 , 2017?",56.6%,"The company is authorized to issue 1.25 billion shares of class B common stock. As of December 31, 2017, there were 707 million shares of class B common stock outstanding. Therefore, the portion of the authorized shares of class B common stock that is outstanding as of December 31, 2017 is 707 million / 1.25 billion = 0.5656 or approximately 56.56%.",OK,,2
+Single_JPM_2016_page_73.pdf-4,what was the 5 year return of the kbw bank index?,158.82%,The 5 year return of the KBW Bank Index was 158.82%.,OK,,0
+Single_BLK_2017_page_35.pdf-4,what is the percentage change in the balance of asset allocation from 2016 to 2017?,11.2%,"The balance of asset allocation in 2016 was $176,675 million and in 2017 it was $196,545 million. The percentage change in the balance of asset allocation from 2016 to 2017 can be calculated as follows:
+
+((196,545 - 176,675) / 176,675) * 100 = 11.24%
+
+So, the percentage change in the balance of asset allocation from 2016 to 2017 is approximately 11.24%.",OK,,3
+Single_HII_2015_page_120.pdf-4,between 2015 and 2013 what was the average compensation expense related to the issuing of the stock award in millions,40.3,The average compensation expense related to the issuing of the stock award between 2015 and 2013 was $43.67 million. This is calculated by adding the expenses for 2015 ($43 million) and 2013 ($44 million) and dividing by 2.,WRONG,unable to extract decimal,1
+Single_AMT_2002_page_104.pdf-2,"what is the total expected payments for principal of long- term debt , including capital leases in the next 36 months?",594840,"The total expected payments for principal of long-term debt, including capital leases in the next 36 months (2003, 2004, and 2005) are $268,496,000 + $131,262,000 + $195,082,000 = $594,840,000.",WRONG,unable to extract decimal,2
+Single_VRTX_2005_page_103.pdf-1,what is the percent change in net loss on disposal of assets between 2004 and 2005?,700%,"The net loss on disposal of assets in 2005 was $344,000 and in 2004 was $43,000. The percent change in net loss on disposal of assets between 2004 and 2005 is calculated as follows:
+
+((344,000 - 43,000) / 43,000) * 100 = 700% 
+
+So, the percent change in net loss on disposal of assets between 2004 and 2005 is 700%.",OK,,2
+Single_STT_2013_page_54.pdf-4,how much higher are the returns of the s&p 500 in the same period ( 2008-2013 ) ? as a percentage .,30%,"The returns of the S&P 500 index from 2008 to 2013 were 228% of the initial investment. In comparison, the returns of State Street Corporation were 198% of the initial investment. Therefore, the returns of the S&P 500 index were 30% higher than those of State Street Corporation in the same period.",WRONG,Answers are different,2
+Single_GS_2014_page_62.pdf-2,what is the percentage change in standardized rwas in 2014?,-1.2%,"The standardized RWAs in 2014 was $627,444 million and in 2013 it was $635,092 million. The percentage change in standardized RWAs in 2014 can be calculated as follows:
+
+((627,444 - 635,092) / 635,092) * 100 = -1.21%
+
+So, the percentage change in standardized RWAs in 2014 was -1.21%.",OK,,2
+Single_ADI_2009_page_90.pdf-3,what percentage did the balance increase from 2007 to 2009?,83.6%,"The balance in 2007 was $9889 and in 2009 it was $18161. The increase in balance from 2007 to 2009 is $18161 - $9889 = $8272. 
+
+To find the percentage increase, we use the formula: (Increase in value/Original value) * 100
+
+So, the percentage increase from 2007 to 2009 is ($8272/$9889) * 100 = 83.67% approximately.",WRONG,Answers are different,6
+Single_AON_2007_page_185.pdf-4,what is the percentual decrease observed in the future minimum rental payments during 2008 and 2009?,13.25%,"The future minimum rental payments decreased from $317 million in 2008 to $275 million in 2009. To calculate the percentual decrease, we subtract the 2009 amount from the 2008 amount, divide by the 2008 amount, and multiply by 100. 
+
+So, the percentual decrease is ((317 - 275) / 317) * 100 = 13.25%.",OK,,2
+Single_ZBH_2002_page_46.pdf-3,what was the percentage change of total debt from 2001 to 2002?,-57%,"The total debt in 2001 was $363.9 million and in 2002 it was $156.7 million. The percentage change in total debt from 2001 to 2002 can be calculated as follows:
+
+((156.7 - 363.9) / 363.9) * 100 = -56.96%
+
+So, the total debt decreased by approximately 57% from 2001 to 2002.",OK,,15

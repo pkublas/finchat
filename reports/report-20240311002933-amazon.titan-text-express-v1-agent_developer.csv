@@ -1,0 +1,67 @@
+document_id,question,expected_answer,actual_answer,result,error,processing_duration_in_sec
+Single_JKHY_2009_page_28.pdf-3,what was the percentage change in the net cash from operating activities from 2008 to 2009,14.1%,"Answer: 2009 annual report in fiscal 2008 , revenues in the credit union systems and services business segment increased 14% ( 14 % ) from fiscal 2007 .
+all revenue components within the segment experienced growth during fiscal 2008 .
+license revenue generated the largest dollar growth in revenue as episys ae , our flagship core processing system aimed at larger credit unions , experienced strong sales throughout the year .
+support and service revenue , which is the largest component of total revenues for the credit union segment , experienced 34 percent growth in eft support and",WRONG,Answers are different,13
+Single_RSG_2008_page_114.pdf-2,what was the percent of the growth in the revenues from 2007 to 2008,1.3%,,WRONG,"unknown format from LLM: The expression calculates the ratio of the revenue in 2008 to the revenue in 2007. It uses the division operator / to divide the revenue_2008 by the revenue_2007.
+
+The expression then calculates the percentage of growth by taking the result of the division and multiplying it by 100. This gives the percentage change in revenue between 2007 and 2008.
+
+Finally, the code prints the ratio and the percentage of growth.",16.469144
+Single_AAPL_2002_page_23.pdf-1,what was the percentage change in net sales from 2000 to 2001?,-32%,,WRONG,"unknown format from LLM: calculates the net sales for each year using the expression 'net_sales_2000 = 37593 * 67', resulting in 'net_sales_2000 = 2518731'. Then, it calculates the net sales for the next year using the expression 'net_sales_2001 = 37593 * 67 + 100', resulting in 'net_sales_2001 = 2518731 + 100 = 2518831'.",14.99899
+Single_UPS_2009_page_33.pdf-2,what was the difference in percentage cumulative return on investment for united parcel service inc . compared to the s&p 500 index for the five year period ended 12/31/09?,-26.16%,,WRONG,"unknown format from LLM: The S&P 500 Index from December 31, 2009, to the current date.
+
+To execute this expression using Python's numexpr library, you can use the following code:
+
+```python
+import numexpr as ne
+
+def cumulative_return_on_investment(symbol, date):
+    # Get the historical stock prices for the given symbol and date
+    prices = get_historical_stock_prices(symbol, date)
+
+    # Initialize the cumulative return and number of shares
+    cumulative_return = 0.0
+    number_of_shares =",15.047567
+Single_CE_2010_page_134.pdf-2,what portion of the total shares subject to outstanding awards is under the 2009 global incentive plan?,70.1%,,WRONG,"LLMMathChain._evaluate(""
+shares_outstanding / total_shares * 100
+"") raised error: 'shares_outstanding'. Please try again with a valid numerical expression",9.836534
+Single_JPM_2013_page_104.pdf-2,what was the percentage increase in litigation reserves in 2012?,15.6%,,WRONG,unknown format from LLM: ,11.463144
+Single_HIG_2004_page_122.pdf-2,what portion of total obligations are due within the next 3 years?,22.99%,,WRONG,"unknown format from LLM: ```
+The Python code uses the 'numpy' and 'pandas' libraries to calculate the total obligations for different durations. The data is stored in a dictionary called 'data', with keys representing the duration categories and values representing the corresponding amounts.
+
+A DataFrame named 'df' is created from the 'data' dictionary. The 'total' column is selected as the target variable, and the remaining columns are used as features.
+
+The total obligations for each duration category are calculated using the 'obligations' variable. The 'total_obligations' variable is assigned the same value as 'oblig",12.011059
+Single_SLG_2013_page_133.pdf-4,"for the years ended december 31 , 2013 , 2012 and 2011 , what was the total in millions capitalized to assets associated with compensation expense related to long-term compensation plans , restricted stock and stock options?\\n",12,Answer: 1.00 %\\n,WRONG,Answers are different,7
+Single_ETR_2008_page_336.pdf-3,what is the percent change in net revenue between 2007 and 2008?,2.4%,Answer: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,WRONG,Answers are different,13
+Single_BKR_2017_page_105.pdf-2,"what portion of the authorized shares of class b common stock is outstanding as of december 31 , 2017?",56.6%,,WRONG,unknown format from LLM: ,10.010763
+Single_JPM_2016_page_73.pdf-4,what was the 5 year return of the kbw bank index?,158.82%,Answer: 1.0,WRONG,Answers are different,7
+Single_BLK_2017_page_35.pdf-4,what is the percentage change in the balance of asset allocation from 2016 to 2017?,11.2%,,WRONG,"unknown format from LLM: a try-except block to handle any potential errors that may occur during the calculation. If an error occurs, it will be caught, and an error message will be printed. Otherwise, the calculated percentage change will be printed.
+
+```text
+print(balance_2017 - balance_2016) / balance_2016 * 100.0
+```
+...numexpr.evaluate(""balance_2017 - balance_2016"")...",14.29109
+Single_HII_2015_page_120.pdf-4,between 2015 and 2013 what was the average compensation expense related to the issuing of the stock award in millions,40.3,,WRONG,"unknown format from LLM: is evaluated using the ""evaluate()"" function from the numexpr library. The expression calculates the ratio between the amount issued and the total outstanding shares.
+The ""evaluate()"" function takes the expression as input and returns the result of the evaluation. In this case, the expression ""(amount_issued / total_outstanding_shares)"" is evaluated, and the result is 0.4444444444444444.
+The result of the evaluation is then printed to the console using the ""print()"" function.
+Overall, the code demonstrates the usage of the numexpr",12.616885
+Single_AMT_2002_page_104.pdf-2,"what is the total expected payments for principal of long- term debt , including capital leases in the next 36 months?",594840,,WRONG,"unknown format from LLM: amount of $420.0 million, with an interest rate of 12.25% per year and a term of 36 months is $149.8 million.",9.930749
+Single_VRTX_2005_page_103.pdf-1,what is the percent change in net loss on disposal of assets between 2004 and 2005?,700%,,WRONG,"unknown format from LLM: 2004, divided by the value for 2004.
+
+Finally, the result is multiplied by 100 to get the percentage change.
+
+The output of the expression would be the percentage change in disposal losses between 2005 and 2004.",11.456139
+Single_STT_2013_page_54.pdf-4,how much higher are the returns of the s&p 500 in the same period ( 2008-2013 ) ? as a percentage .,30%,,WRONG,"unknown format from LLM: The 'max_ret' and 'min_ret' variables represent the maximum and minimum returns of the S&P 500 over the specified period.
+
+The expression '(max_ret - min_ret) / min_ret' calculates the percentage increase in the returns of the S&P 500 by dividing the difference between the maximum and minimum returns by the minimum return itself.
+
+The 'select' statement is used to perform a subquery and retrieve the minimum and maximum returns from the S&P 500 for the given period.
+
+The expression '((max_ret -",14.925241
+Single_GS_2014_page_62.pdf-2,what is the percentage change in standardized rwas in 2014?,-1.2%,,WRONG,"unknown format from LLM: result is taken to the power of 100 to convert it to a percentage.
+Finally, the absolute value of the percentage change is multiplied by 100 to get the final result in percentage terms.",11.186323
+Single_ADI_2009_page_90.pdf-3,what percentage did the balance increase from 2007 to 2009?,83.6%,"Answer: 241,000,000.00",WRONG,Answers are different,14
+Single_AON_2007_page_185.pdf-4,what is the percentual decrease observed in the future minimum rental payments during 2008 and 2009?,13.25%,Answer:  {PHONE},WRONG,unable to extract decimal,15
+Single_ZBH_2002_page_46.pdf-3,what was the percentage change of total debt from 2001 to 2002?,-57%,,WRONG,unknown format from LLM: The numexpr library is used to evaluate the expression efficiently and avoid unnecessary floating-point calculations. The output of the code is the percentage change in the ratio of 'Bonds_outstanding_US$' to 'Total_Assets_US$' between the two fiscal years.,9.948935

@@ -1,0 +1,55 @@
+document_id,question,expected_answer,actual_answer,result,error,processing_duration_in_sec
+Single_JKHY_2009_page_28.pdf-3,what was the percentage change in the net cash from operating activities from 2008 to 2009,14.1%,,WRONG,"LLMMathChain._evaluate(""
+(net_cash_2009 - net_cash_2008) / net_cash_2008 * 100
+"") raised error: 'net_cash_2008'. Please try again with a valid numerical expression",13.078432
+Single_RSG_2008_page_114.pdf-2,what was the percent of the growth in the revenues from 2007 to 2008,1.3%,,WRONG,"LLMMathChain._evaluate(""
+(revenue_2008 - revenue_2007) / revenue_2007 * 100
+"") raised error: 'revenue_2007'. Please try again with a valid numerical expression",13.794149
+Single_AAPL_2002_page_23.pdf-1,what was the percentage change in net sales from 2000 to 2001?,-32%,,WRONG,"LLMMathChain._evaluate(""
+(gross_margin_2001 - gross_margin_2000) / gross_margin_2000 * 100
+"") raised error: 'gross_margin_2000'. Please try again with a valid numerical expression",11.096771
+Single_UPS_2009_page_33.pdf-2,what was the difference in percentage cumulative return on investment for united parcel service inc . compared to the s&p 500 index for the five year period ended 12/31/09?,-26.16%,Answer: -25.619430026442068,WRONG,Answers are different,10
+Single_CE_2010_page_134.pdf-2,what portion of the total shares subject to outstanding awards is under the 2009 global incentive plan?,70.1%,,WRONG,"LLMMathChain._evaluate(""
+shares_under_2009_plan / total_shares_outstanding_awards * 100
+"") raised error: 'shares_under_2009_plan'. Please try again with a valid numerical expression",11.909237
+Single_JPM_2013_page_104.pdf-2,what was the percentage increase in litigation reserves in 2012?,15.6%,,WRONG,"LLMMathChain._evaluate(""
+(litigation_reserves_2012 - litigation_reserves_2011) / litigation_reserves_2011 * 100
+"") raised error: 'litigation_reserves_2011'. Please try again with a valid numerical expression",11.315328
+Single_HIG_2004_page_122.pdf-2,what portion of total obligations are due within the next 3 years?,22.99%,Answer: 14.241654972327778,WRONG,Answers are different,11
+Single_SLG_2013_page_133.pdf-4,"for the years ended december 31 , 2013 , 2012 and 2011 , what was the total in millions capitalized to assets associated with compensation expense related to long-term compensation plans , restricted stock and stock options?\\n",12,,WRONG,"LLMMathChain._evaluate(""
+compensation_expense_2013 + compensation_expense_2012 + compensation_expense_2011
+"") raised error: 'compensation_expense_2011'. Please try again with a valid numerical expression",16.559715
+Single_ETR_2008_page_336.pdf-3,what is the percent change in net revenue between 2007 and 2008?,2.4%,,WRONG,"LLMMathChain._evaluate(""
+(net_revenue_2008 - net_revenue_2007) / net_revenue_2007 * 100
+"") raised error: 'net_revenue_2007'. Please try again with a valid numerical expression",12.746653
+Single_BKR_2017_page_105.pdf-2,"what portion of the authorized shares of class b common stock is outstanding as of december 31 , 2017?",56.6%,,WRONG,"LLMMathChain._evaluate(""
+outstanding_shares_dec_2017 / authorized_shares_class_b * 100
+"") raised error: 'authorized_shares_class_b'. Please try again with a valid numerical expression",15.70683
+Single_JPM_2016_page_73.pdf-4,what was the 5 year return of the kbw bank index?,158.82%,,WRONG,"LLMMathChain._evaluate(""
+""(258.82 - 100.00) / 100.00 * 100""
+"") raised error: data type must provide an itemsize. Please try again with a valid numerical expression",13.191978
+Single_BLK_2017_page_35.pdf-4,what is the percentage change in the balance of asset allocation from 2016 to 2017?,11.2%,,WRONG,"LLMMathChain._evaluate(""
+(balance_2017 - balance_2016) / balance_2016 * 100
+"") raised error: 'balance_2016'. Please try again with a valid numerical expression",13.253638
+Single_HII_2015_page_120.pdf-4,between 2015 and 2013 what was the average compensation expense related to the issuing of the stock award in millions,40.3,,WRONG,"LLMMathChain._evaluate(""
+(compensation_expense_2013 + compensation_expense_2015) / 2
+"") raised error: 'compensation_expense_2013'. Please try again with a valid numerical expression",13.394307
+Single_AMT_2002_page_104.pdf-2,"what is the total expected payments for principal of long- term debt , including capital leases in the next 36 months?",594840,,WRONG,"LLMMathChain._evaluate(""
+sum(expected_payments)
+"") raised error: 'expected_payments'. Please try again with a valid numerical expression",11.278233
+Single_VRTX_2005_page_103.pdf-1,what is the percent change in net loss on disposal of assets between 2004 and 2005?,700%,,WRONG,"LLMMathChain._evaluate(""
+(net_loss_on_disposal_of_assets_2005 - net_loss_on_disposal_of_assets_2004) / net_loss_on_disposal_of_assets_2004 * 100
+"") raised error: 'net_loss_on_disposal_of_assets_2004'. Please try again with a valid numerical expression",8.419231
+Single_STT_2013_page_54.pdf-4,how much higher are the returns of the s&p 500 in the same period ( 2008-2013 ) ? as a percentage .,30%,,WRONG,"LLMMathChain._evaluate(""
+""(228 - 100) / 100 * 100""
+"") raised error: data type must provide an itemsize. Please try again with a valid numerical expression",15.653816
+Single_GS_2014_page_62.pdf-2,what is the percentage change in standardized rwas in 2014?,-1.2%,Answer: -1.2042349769797132,OK,,11
+Single_ADI_2009_page_90.pdf-3,what percentage did the balance increase from 2007 to 2009?,83.6%,,WRONG,"LLMMathChain._evaluate(""
+balance_2009 - balance_2007
+"") raised error: 'balance_2007'. Please try again with a valid numerical expression",13.60844
+Single_AON_2007_page_185.pdf-4,what is the percentual decrease observed in the future minimum rental payments during 2008 and 2009?,13.25%,,WRONG,"LLMMathChain._evaluate(""
+(rental_payment_2008 - rental_payment_2009) / rental_payment_2008 * 100
+"") raised error: 'rental_payment_2008'. Please try again with a valid numerical expression",16.081182
+Single_ZBH_2002_page_46.pdf-3,what was the percentage change of total debt from 2001 to 2002?,-57%,,WRONG,"LLMMathChain._evaluate(""
+(total_debt_2002 - total_debt_2001) / total_debt_2001 * 100
+"") raised error: 'total_debt_2001'. Please try again with a valid numerical expression",11.088999

@@ -1,0 +1,43 @@
+document_id,question,expected_answer,actual_answer,result,error,processing_duration_in_sec
+Single_JKHY_2009_page_28.pdf-3,what was the percentage change in the net cash from operating activities from 2008 to 2009,14.1%,"
+The percentage change in net cash from operating activities from 2008 to 2009 is 10.97%",WRONG,Answers are different,3
+Single_RSG_2008_page_114.pdf-2,what was the percent of the growth in the revenues from 2007 to 2008,1.3%,"
+Based on the provided content, the percent of the growth in the revenues from 2007 to 2008 is 2.3%.",WRONG,Answers are different,7
+Single_AAPL_2002_page_23.pdf-1,what was the percentage change in net sales from 2000 to 2001?,-32%,"
+Based on the provided content, the percentage change in net sales from 2000 to 2001 is 12.78%.",WRONG,Answers are different,3
+Single_UPS_2009_page_33.pdf-2,what was the difference in percentage cumulative return on investment for united parcel service inc . compared to the s&p 500 index for the five year period ended 12/31/09?,-26.16%,"
+Based on the provided content, the difference in percentage cumulative return on investment for United Parcel Service Inc. compared to the S&P 500 index for the five year period ended 12/31/09 is 10.51%.",WRONG,Answers are different,4
+Single_CE_2010_page_134.pdf-2,what portion of the total shares subject to outstanding awards is under the 2009 global incentive plan?,70.1%,2530454,WRONG,unable to extract decimal,1
+Single_JPM_2013_page_104.pdf-2,what was the percentage increase in litigation reserves in 2012?,15.6%,37.7 billion,WRONG,unable to extract decimal,1
+Single_HIG_2004_page_122.pdf-2,what portion of total obligations are due within the next 3 years?,22.99%,1-3 years,WRONG,unable to extract decimal,0
+Single_SLG_2013_page_133.pdf-4,"for the years ended december 31 , 2013 , 2012 and 2011 , what was the total in millions capitalized to assets associated with compensation expense related to long-term compensation plans , restricted stock and stock options?\\n",12,"
+```
+
+For the years ended December 31 , 2013 , 2012 and 2011 , approximately $ 4.5 million , $ 4.1 million and $ 3.4 million , respectively , was capitalized to assets associated with compensation expense related to our long-term compensation plans , restricted stock and stock options .",WRONG,unable to extract decimal,3
+Single_ETR_2008_page_336.pdf-3,what is the percent change in net revenue between 2007 and 2008?,2.4%,"
+percent change = ( 498.8 - 486.9 ) / 486.9 * 100 = 11.93 %",WRONG,unable to extract decimal,3
+Single_BKR_2017_page_105.pdf-2,"what portion of the authorized shares of class b common stock is outstanding as of december 31 , 2017?",56.6%,7070000,WRONG,unable to extract decimal,0
+Single_JPM_2016_page_73.pdf-4,what was the 5 year return of the kbw bank index?,158.82%,258.82,WRONG,unable to extract decimal,0
+Single_BLK_2017_page_35.pdf-4,what is the percentage change in the balance of asset allocation from 2016 to 2017?,11.2%,"
+The percentage change in the balance of asset allocation from 2016 to 2017 is 19.6545%.",WRONG,Answers are different,4
+Single_HII_2015_page_120.pdf-4,between 2015 and 2013 what was the average compensation expense related to the issuing of the stock award in millions,40.3,"
+Based on the provided content, the average compensation expense related to the issuing of the stock award in millions between 2015 and 2013 is $ 41.",WRONG,unable to extract decimal,4
+Single_AMT_2002_page_104.pdf-2,"what is the total expected payments for principal of long- term debt , including capital leases in the next 36 months?",594840,"
+$ 3607539",WRONG,unable to extract decimal,0
+Single_VRTX_2005_page_103.pdf-1,what is the percent change in net loss on disposal of assets between 2004 and 2005?,700%,"
+The percent change in net loss on disposal of assets between 2004 and 2005 is
+```
+( 344000 - 43000 ) / 43000 = - 9.09 %
+```",WRONG,unable to extract decimal,4
+Single_STT_2013_page_54.pdf-4,how much higher are the returns of the s&p 500 in the same period ( 2008-2013 ) ? as a percentage .,30%,"
+the cumulative total shareholder return of state street common stock over the five-year period was 41.4 percent , compared to 48.2 percent for the s&p 500 index , 34.1 percent for the s&p financial index and 25.9 percent for the kbw bank index .
+the difference between the cumulative total shareholder return of state street common stock and the cumulative total return of the s&p 500 index was 6.8 percent .
+to calculate the percentage difference between the two , we can use the following formula : percent difference =",WRONG,unable to extract decimal,3
+Single_GS_2014_page_62.pdf-2,what is the percentage change in standardized rwas in 2014?,-1.2%,0.99,WRONG,unable to extract decimal,1
+Single_ADI_2009_page_90.pdf-3,what percentage did the balance increase from 2007 to 2009?,83.6%,"
+Based on the provided content, the balance increased by $18,372 between 2007 and 2009.",WRONG,unable to extract decimal,3
+Single_AON_2007_page_185.pdf-4,what is the percentual decrease observed in the future minimum rental payments during 2008 and 2009?,13.25%,"
+
+The future minimum rental payments decreased by 35.23% from 2008 to 2009.",WRONG,Answers are different,2
+Single_ZBH_2002_page_46.pdf-3,what was the percentage change of total debt from 2001 to 2002?,-57%,"
+The total debt increased by 3.47% from 2001 to 2002",WRONG,Answers are different,4

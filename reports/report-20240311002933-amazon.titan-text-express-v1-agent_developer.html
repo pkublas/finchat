@@ -1,0 +1,97 @@
+
+    <html>
+    <head>
+        <title>HTML Report</title>
+        <style>
+            table { border-collapse: collapse; width: 100%; }
+            th, td { padding: 8px; text-align: left; border-bottom: 1px solid #ddd; }
+            th { background-color: #f2f2f2; }
+            tr:nth-child(even) { background-color: #f2f2f2; }
+            tr:hover { background-color: #ddd; }
+        </style>
+    </head>
+    <body>
+    
+        <h1>Report</h1>
+        
+        <table border="0">
+            <tr><th>Model</th><th>Agent</th><th>Description</th></tr>
+            <tr>
+                <td>amazon.titan-text-express-v1</td>
+                <td>AgentFinancialAnalystDeveloper</td>
+                <td>The agent working in stages to generate Python's numexpr expression to produce answers.</td></tr>
+        </table>
+        
+        <h3></h3>
+
+        <table border="0">
+            <tr><th>No. of documents processed</th><th>Success rate</th><th>Error rate</th></tr>
+            <tr>
+                <td>20</td>
+                <td>0.00</td>
+                <td>100.00</td></tr>
+        </table>
+        
+        <h3></h3>
+        
+        <table border="0">
+            <tr>
+                <th>Document Id</th>
+                <th>Question</th>
+                <th>Answer Expected</th>
+                <th>Actual Answer</th>
+                <th>Result</th>
+                <th>Processing Duration [sec]</th>
+                <th>Error</th>
+            </tr>
+    <tr><td>Single_JKHY_2009_page_28.pdf-3</td><td>what was the percentage change in the net cash from operating activities from 2008 to 2009</td><td>14.1%</td><td>Answer: 2009 annual report in fiscal 2008 , revenues in the credit union systems and services business segment increased 14% ( 14 % ) from fiscal 2007 .
+all revenue components within the segment experienced growth during fiscal 2008 .
+license revenue generated the largest dollar growth in revenue as episys ae , our flagship core processing system aimed at larger credit unions , experienced strong sales throughout the year .
+support and service revenue , which is the largest component of total revenues for the credit union segment , experienced 34 percent growth in eft support and</td><td>WRONG</td><td>13</td><td>Answers are different</td></tr><tr><td>Single_RSG_2008_page_114.pdf-2</td><td>what was the percent of the growth in the revenues from 2007 to 2008</td><td>1.3%</td><td>None</td><td>WRONG</td><td>16.469144</td><td>unknown format from LLM: The expression calculates the ratio of the revenue in 2008 to the revenue in 2007. It uses the division operator / to divide the revenue_2008 by the revenue_2007.
+
+The expression then calculates the percentage of growth by taking the result of the division and multiplying it by 100. This gives the percentage change in revenue between 2007 and 2008.
+
+Finally, the code prints the ratio and the percentage of growth.</td></tr><tr><td>Single_AAPL_2002_page_23.pdf-1</td><td>what was the percentage change in net sales from 2000 to 2001?</td><td>-32%</td><td>None</td><td>WRONG</td><td>14.99899</td><td>unknown format from LLM: calculates the net sales for each year using the expression 'net_sales_2000 = 37593 * 67', resulting in 'net_sales_2000 = 2518731'. Then, it calculates the net sales for the next year using the expression 'net_sales_2001 = 37593 * 67 + 100', resulting in 'net_sales_2001 = 2518731 + 100 = 2518831'.</td></tr><tr><td>Single_UPS_2009_page_33.pdf-2</td><td>what was the difference in percentage cumulative return on investment for united parcel service inc . compared to the s&p 500 index for the five year period ended 12/31/09?</td><td>-26.16%</td><td>None</td><td>WRONG</td><td>15.047567</td><td>unknown format from LLM: The S&P 500 Index from December 31, 2009, to the current date.
+
+To execute this expression using Python's numexpr library, you can use the following code:
+
+```python
+import numexpr as ne
+
+def cumulative_return_on_investment(symbol, date):
+    # Get the historical stock prices for the given symbol and date
+    prices = get_historical_stock_prices(symbol, date)
+
+    # Initialize the cumulative return and number of shares
+    cumulative_return = 0.0
+    number_of_shares =</td></tr><tr><td>Single_CE_2010_page_134.pdf-2</td><td>what portion of the total shares subject to outstanding awards is under the 2009 global incentive plan?</td><td>70.1%</td><td>None</td><td>WRONG</td><td>9.836534</td><td>LLMMathChain._evaluate("
+shares_outstanding / total_shares * 100
+") raised error: 'shares_outstanding'. Please try again with a valid numerical expression</td></tr><tr><td>Single_JPM_2013_page_104.pdf-2</td><td>what was the percentage increase in litigation reserves in 2012?</td><td>15.6%</td><td>None</td><td>WRONG</td><td>11.463144</td><td>unknown format from LLM: </td></tr><tr><td>Single_HIG_2004_page_122.pdf-2</td><td>what portion of total obligations are due within the next 3 years?</td><td>22.99%</td><td>None</td><td>WRONG</td><td>12.011059</td><td>unknown format from LLM: ```
+The Python code uses the 'numpy' and 'pandas' libraries to calculate the total obligations for different durations. The data is stored in a dictionary called 'data', with keys representing the duration categories and values representing the corresponding amounts.
+
+A DataFrame named 'df' is created from the 'data' dictionary. The 'total' column is selected as the target variable, and the remaining columns are used as features.
+
+The total obligations for each duration category are calculated using the 'obligations' variable. The 'total_obligations' variable is assigned the same value as 'oblig</td></tr><tr><td>Single_SLG_2013_page_133.pdf-4</td><td>for the years ended december 31 , 2013 , 2012 and 2011 , what was the total in millions capitalized to assets associated with compensation expense related to long-term compensation plans , restricted stock and stock options?\\n</td><td>12</td><td>Answer: 1.00 %\\n</td><td>WRONG</td><td>7</td><td>Answers are different</td></tr><tr><td>Single_ETR_2008_page_336.pdf-3</td><td>what is the percent change in net revenue between 2007 and 2008?</td><td>2.4%</td><td>Answer: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</td><td>WRONG</td><td>13</td><td>Answers are different</td></tr><tr><td>Single_BKR_2017_page_105.pdf-2</td><td>what portion of the authorized shares of class b common stock is outstanding as of december 31 , 2017?</td><td>56.6%</td><td>None</td><td>WRONG</td><td>10.010763</td><td>unknown format from LLM: </td></tr><tr><td>Single_JPM_2016_page_73.pdf-4</td><td>what was the 5 year return of the kbw bank index?</td><td>158.82%</td><td>Answer: 1.0</td><td>WRONG</td><td>7</td><td>Answers are different</td></tr><tr><td>Single_BLK_2017_page_35.pdf-4</td><td>what is the percentage change in the balance of asset allocation from 2016 to 2017?</td><td>11.2%</td><td>None</td><td>WRONG</td><td>14.29109</td><td>unknown format from LLM: a try-except block to handle any potential errors that may occur during the calculation. If an error occurs, it will be caught, and an error message will be printed. Otherwise, the calculated percentage change will be printed.
+
+```text
+print(balance_2017 - balance_2016) / balance_2016 * 100.0
+```
+...numexpr.evaluate("balance_2017 - balance_2016")...</td></tr><tr><td>Single_HII_2015_page_120.pdf-4</td><td>between 2015 and 2013 what was the average compensation expense related to the issuing of the stock award in millions</td><td>40.3</td><td>None</td><td>WRONG</td><td>12.616885</td><td>unknown format from LLM: is evaluated using the "evaluate()" function from the numexpr library. The expression calculates the ratio between the amount issued and the total outstanding shares.
+The "evaluate()" function takes the expression as input and returns the result of the evaluation. In this case, the expression "(amount_issued / total_outstanding_shares)" is evaluated, and the result is 0.4444444444444444.
+The result of the evaluation is then printed to the console using the "print()" function.
+Overall, the code demonstrates the usage of the numexpr</td></tr><tr><td>Single_AMT_2002_page_104.pdf-2</td><td>what is the total expected payments for principal of long- term debt , including capital leases in the next 36 months?</td><td>594840</td><td>None</td><td>WRONG</td><td>9.930749</td><td>unknown format from LLM: amount of $420.0 million, with an interest rate of 12.25% per year and a term of 36 months is $149.8 million.</td></tr><tr><td>Single_VRTX_2005_page_103.pdf-1</td><td>what is the percent change in net loss on disposal of assets between 2004 and 2005?</td><td>700%</td><td>None</td><td>WRONG</td><td>11.456139</td><td>unknown format from LLM: 2004, divided by the value for 2004.
+
+Finally, the result is multiplied by 100 to get the percentage change.
+
+The output of the expression would be the percentage change in disposal losses between 2005 and 2004.</td></tr><tr><td>Single_STT_2013_page_54.pdf-4</td><td>how much higher are the returns of the s&p 500 in the same period ( 2008-2013 ) ? as a percentage .</td><td>30%</td><td>None</td><td>WRONG</td><td>14.925241</td><td>unknown format from LLM: The 'max_ret' and 'min_ret' variables represent the maximum and minimum returns of the S&P 500 over the specified period.
+
+The expression '(max_ret - min_ret) / min_ret' calculates the percentage increase in the returns of the S&P 500 by dividing the difference between the maximum and minimum returns by the minimum return itself.
+
+The 'select' statement is used to perform a subquery and retrieve the minimum and maximum returns from the S&P 500 for the given period.
+
+The expression '((max_ret -</td></tr><tr><td>Single_GS_2014_page_62.pdf-2</td><td>what is the percentage change in standardized rwas in 2014?</td><td>-1.2%</td><td>None</td><td>WRONG</td><td>11.186323</td><td>unknown format from LLM: result is taken to the power of 100 to convert it to a percentage.
+Finally, the absolute value of the percentage change is multiplied by 100 to get the final result in percentage terms.</td></tr><tr><td>Single_ADI_2009_page_90.pdf-3</td><td>what percentage did the balance increase from 2007 to 2009?</td><td>83.6%</td><td>Answer: 241,000,000.00</td><td>WRONG</td><td>14</td><td>Answers are different</td></tr><tr><td>Single_AON_2007_page_185.pdf-4</td><td>what is the percentual decrease observed in the future minimum rental payments during 2008 and 2009?</td><td>13.25%</td><td>Answer:  {PHONE}</td><td>WRONG</td><td>15</td><td>unable to extract decimal</td></tr><tr><td>Single_ZBH_2002_page_46.pdf-3</td><td>what was the percentage change of total debt from 2001 to 2002?</td><td>-57%</td><td>None</td><td>WRONG</td><td>9.948935</td><td>unknown format from LLM: The numexpr library is used to evaluate the expression efficiently and avoid unnecessary floating-point calculations. The output of the code is the percentage change in the ratio of 'Bonds_outstanding_US$' to 'Total_Assets_US$' between the two fiscal years.</td></tr><tr><td colspan='7'>Number of documents: 20 | Success rate: 0.00 | Error rate: 100.00</td></tr></table></body></html>
+        </table>
+    </body>
+    </html>
+    

@@ -1,0 +1,51 @@
+
+    <html>
+    <head>
+        <title>HTML Report</title>
+        <style>
+            table { border-collapse: collapse; width: 100%; }
+            th, td { padding: 8px; text-align: left; border-bottom: 1px solid #ddd; }
+            th { background-color: #f2f2f2; }
+            tr:nth-child(even) { background-color: #f2f2f2; }
+            tr:hover { background-color: #ddd; }
+        </style>
+    </head>
+    <body>
+    
+        <h1>Report</h1>
+        
+        <table border="0">
+            <tr><th>Model</th><th>Agent</th><th>Description</th></tr>
+            <tr>
+                <td>gpt-4</td>
+                <td>agent_keeping_history</td>
+                <td>The agent is working in 3 stages, first by splitting a questions into several smaller ones and keeping the history of conversation through the conversation.</td></tr>
+        </table>
+        
+        <h3></h3>
+
+        <table border="0">
+            <tr><th>No. of documents processed</th><th>Success rate</th><th>Error rate</th></tr>
+            <tr>
+                <td>20</td>
+                <td>65.00</td>
+                <td>35.00</td></tr>
+        </table>
+        
+        <h3></h3>
+        
+        <table border="0">
+            <tr>
+                <th>Document Id</th>
+                <th>Question</th>
+                <th>Answer Expected</th>
+                <th>Actual Answer</th>
+                <th>Result</th>
+                <th>Processing Duration [sec]</th>
+                <th>Error</th>
+            </tr>
+    <tr><td>Single_JKHY_2009_page_28.pdf-3</td><td>what was the percentage change in the net cash from operating activities from 2008 to 2009</td><td>14.1%</td><td>```The percentage change in the net cash from operating activities from 2008 to 2009 was approximately 14.13%.```</td><td>OK</td><td>7</td><td></td></tr><tr><td>Single_RSG_2008_page_114.pdf-2</td><td>what was the percent of the growth in the revenues from 2007 to 2008</td><td>1.3%</td><td>```The percent of the growth in the revenues from 2007 to 2008 was approximately 1.27%.```</td><td>OK</td><td>7</td><td></td></tr><tr><td>Single_AAPL_2002_page_23.pdf-1</td><td>what was the percentage change in net sales from 2000 to 2001?</td><td>-32%</td><td>The percentage change in net sales from 2000 to 2001 was approximately -32.85%.</td><td>WRONG</td><td>6</td><td>Answers are different</td></tr><tr><td>Single_UPS_2009_page_33.pdf-2</td><td>what was the difference in percentage cumulative return on investment for united parcel service inc . compared to the s&p 500 index for the five year period ended 12/31/09?</td><td>-26.16%</td><td>```The difference in percentage cumulative return on investment for United Parcel Service Inc. compared to the S&P 500 index for the five year period ended 12/31/09 is approximately -26.16%.```</td><td>OK</td><td>11</td><td></td></tr><tr><td>Single_CE_2010_page_134.pdf-2</td><td>what portion of the total shares subject to outstanding awards is under the 2009 global incentive plan?</td><td>70.1%</td><td>```The portion of the total shares subject to outstanding awards that is under the 2009 global incentive plan is approximately 29.94%.```</td><td>WRONG</td><td>21</td><td>Answers are different</td></tr><tr><td>Single_JPM_2013_page_104.pdf-2</td><td>what was the percentage increase in litigation reserves in 2012?</td><td>15.6%</td><td>```The percentage increase in litigation reserves in 2012 was 15.63%.```</td><td>OK</td><td>26</td><td></td></tr><tr><td>Single_HIG_2004_page_122.pdf-2</td><td>what portion of total obligations are due within the next 3 years?</td><td>22.99%</td><td>```The portion of total obligations that are due within the next 3 years is approximately 22.9%. This is calculated by adding the obligations due within less than 1 year ($27,729) and those due within 1-3 years ($45,161), which totals to $72,890. This amount is then divided by the total obligations ($317,105) and multiplied by 100 to get the percentage.```</td><td>WRONG</td><td>32</td><td>Answers are different</td></tr><tr><td>Single_SLG_2013_page_133.pdf-4</td><td>for the years ended december 31 , 2013 , 2012 and 2011 , what was the total in millions capitalized to assets associated with compensation expense related to long-term compensation plans , restricted stock and stock options?\\n</td><td>12</td><td>```For the years ended December 31, 2013, 2012, and 2011, the total in millions capitalized to assets associated with compensation expense related to long-term compensation plans, restricted stock, and stock options was approximately $4.5 million, $4.1 million, and $3.4 million respectively.```</td><td>WRONG</td><td>37</td><td>unable to extract decimal</td></tr><tr><td>Single_ETR_2008_page_336.pdf-3</td><td>what is the percent change in net revenue between 2007 and 2008?</td><td>2.4%</td><td>The percent change in net revenue between 2007 and 2008 is approximately 2.44%.</td><td>OK</td><td>12</td><td></td></tr><tr><td>Single_BKR_2017_page_105.pdf-2</td><td>what portion of the authorized shares of class b common stock is outstanding as of december 31 , 2017?</td><td>56.6%</td><td>```The portion of the authorized shares of class B common stock that was outstanding as of December 31, 2017 is approximately 56.56%.```</td><td>OK</td><td>21</td><td></td></tr><tr><td>Single_JPM_2016_page_73.pdf-4</td><td>what was the 5 year return of the kbw bank index?</td><td>158.82%</td><td>The 5 year return of the KBW Bank Index was 158.82%.</td><td>OK</td><td>11</td><td></td></tr><tr><td>Single_BLK_2017_page_35.pdf-4</td><td>what is the percentage change in the balance of asset allocation from 2016 to 2017?</td><td>11.2%</td><td>The percentage change in the balance of asset allocation from 2016 to 2017 is approximately 11.24%.</td><td>OK</td><td>28</td><td></td></tr><tr><td>Single_HII_2015_page_120.pdf-4</td><td>between 2015 and 2013 what was the average compensation expense related to the issuing of the stock award in millions</td><td>40.3</td><td>The average compensation expense related to the issuing of the stock award between 2015 and 2013 was $43.5 million.</td><td>WRONG</td><td>18</td><td>unable to extract decimal</td></tr><tr><td>Single_AMT_2002_page_104.pdf-2</td><td>what is the total expected payments for principal of long- term debt , including capital leases in the next 36 months?</td><td>594840</td><td>```The total expected payments for principal of long-term debt, including capital leases in the next 36 months is $594,840,000.```</td><td>WRONG</td><td>21</td><td>unable to extract decimal</td></tr><tr><td>Single_VRTX_2005_page_103.pdf-1</td><td>what is the percent change in net loss on disposal of assets between 2004 and 2005?</td><td>700%</td><td>```The percent change in net loss on disposal of assets between 2004 and 2005 is approximately 700%.```</td><td>OK</td><td>14</td><td></td></tr><tr><td>Single_STT_2013_page_54.pdf-4</td><td>how much higher are the returns of the s&p 500 in the same period ( 2008-2013 ) ? as a percentage .</td><td>30%</td><td>```The returns of the S&P 500 index were 30% higher compared to State Street Corporation from 2008 to 2013.```</td><td>OK</td><td>15</td><td></td></tr><tr><td>Single_GS_2014_page_62.pdf-2</td><td>what is the percentage change in standardized rwas in 2014?</td><td>-1.2%</td><td>```The percentage change in standardized RWAs in 2014 was approximately -1.21%.```</td><td>OK</td><td>25</td><td></td></tr><tr><td>Single_ADI_2009_page_90.pdf-3</td><td>what percentage did the balance increase from 2007 to 2009?</td><td>83.6%</td><td>The balance increased by approximately 83.67% from 2007 to 2009.</td><td>WRONG</td><td>19</td><td>Answers are different</td></tr><tr><td>Single_AON_2007_page_185.pdf-4</td><td>what is the percentual decrease observed in the future minimum rental payments during 2008 and 2009?</td><td>13.25%</td><td>```The percentual decrease observed in the future minimum rental payments during 2008 and 2009 was 13.25%.```</td><td>OK</td><td>8</td><td></td></tr><tr><td>Single_ZBH_2002_page_46.pdf-3</td><td>what was the percentage change of total debt from 2001 to 2002?</td><td>-57%</td><td>The percentage change of total debt from 2001 to 2002 was approximately -56.96%.</td><td>OK</td><td>51</td><td></td></tr><tr><td colspan='7'>Number of documents: 20 | Success rate: 65.00 | Error rate: 35.00</td></tr></table></body></html>
+        </table>
+    </body>
+    </html>
+    
