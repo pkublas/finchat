@@ -1,10 +1,11 @@
 ## intro
 
 	- a piece of code working with a dataset (data/train.json) from https://github.com/czyssrs/ConvFinQA
+	- it aism to answer questions invluded in 
 	
 ### reports
 
-	- html and csv fiels are created for every run
+	- html and csv files are created for every run
 	- html includes each document processed, actual and expected answer, errors as well as accuracy summary
 
 ### run
