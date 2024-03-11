@@ -1,9 +1,12 @@
 import csv
 import json
 import os
-from dataclasses import dataclass, asdict
+import sys
+from dataclasses import asdict, fields
 from datetime import datetime
 import re
+
+from openai import RateLimitError
 from langchain.chains import APIChain
 
 from llms import LLMStrategy
@@ -14,7 +17,7 @@ RESULT_WRONG = "WRONG"
 
 
 def get_documents(
-    data_file: str = "data/train.json",
+    data_file: str,
     document_ids: list = None,
     number_of_docs: int = None,
 ):
@@ -197,8 +200,12 @@ def generate_html_report(file_name, header, data):
     </html>
     """
 
-    with open(file_name, "w") as html_file:
-        html_file.write(html_content)
+    try:
+        with open(file_name, "w") as html_file:
+            html_file.write(html_content)
+    except FileNotFoundError as e:
+        print(e)
+        sys.exit("Problems saving HTML report")
 
     print(f"HTML saved to {file_name}")
 
@@ -211,14 +218,17 @@ def generate_csv(file_name, data):
     :return:
     """
 
-    with open(file_name, "w", newline="") as csvfile:
-        fieldnames = asdict(data[0]).keys()
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-        writer.writeheader()
-        for row in data:
-            writer.writerow(asdict(row))
-
-    print(f"CSV saved to {file_name}")
+    try:
+        with open(file_name, "w", newline="") as csvfile:
+            # fieldnames = asdict(data[0]).keys()
+            fieldnames = dict((field.name, getattr(data[0], field.name)) for field in fields(data[0]))
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            writer.writeheader()
+            for row in data:
+                writer.writerow(dict((field.name, getattr(row, field.name)) for field in fields(row)))
+        print(f"CSV saved to {file_name}")
+    except FileNotFoundError as e:
+        print(e)
 
 
 def process_document(agent, document: Document):
@@ -242,7 +252,7 @@ def process_document(agent, document: Document):
             input={"data": document.data, "question": document.question}
         )
         processing_duration = int((datetime.now() - start_time).total_seconds())
-    except ValueError as e:
+    except (ValueError, RateLimitError) as e:
         print(e)
         result.error = e
         result.processing_duration_in_sec = (
@@ -279,7 +289,7 @@ def process_document(agent, document: Document):
     return result
 
 
-def generate_reports(results, header, do_html=True, do_csv=True):
+def generate_reports(result_folder, results, header, do_html=True, do_csv=True):
     """
     Wrapper around generating html and csv reports
 
@@ -289,8 +299,8 @@ def generate_reports(results, header, do_html=True, do_csv=True):
     """
 
     timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
-    filename_html = os.path.join("reports", f"report-{timestamp}-{header.get('model_name')}-{header.get('agent_name')}.html")
-    filename_csv = os.path.join("reports", f"report-{timestamp}-{header.get('model_name')}-{header.get('agent_name')}.csv")
+    filename_html = os.path.join(result_folder, f"report-{timestamp}-{header.get('model_name')}-{header.get('agent_name')}.html")
+    filename_csv = os.path.join(result_folder, f"report-{timestamp}-{header.get('model_name')}-{header.get('agent_name')}.csv")
     if do_html:
         generate_html_report(
             filename_html,

@@ -43,7 +43,7 @@ def run(data, question):
 
 if __name__ == "__main__":
 
-    documents = read_data("data/train.json")
+    documents = read_data("../data/train.json")
     document_id = "Single_UPS_2009_page_33.pdf-2"
     doc = documents.get(document_id)
     question = doc.get("question")
