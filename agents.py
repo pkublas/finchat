@@ -24,7 +24,7 @@ class AgentFinancialAnalystSimple:
             }
         )
         print(answer)
-        return answer
+        return answer.get("text")
 
 
 class AgentFinancialAnalystWithHistory:

@@ -140,7 +140,7 @@ def generate_html_report(file_name, header, data):
         <table border="0">
             <tr><th>Model</th><th>Agent</th><th>Description</th></tr>
             <tr>
-                <td>{header.get("model")}</td>
+                <td>{header.get("model_name")}</td>
                 <td>{header.get("agent_name")}</td>
                 <td>{header.get("description")}</td></tr>
         </table>
@@ -229,6 +229,7 @@ def process_document(agent, document: Document):
     :return:
     """
 
+    print(f"* document_id={document.document_id}")
     result = Result(
         document_id=document.document_id,
         question=document.question,
@@ -251,7 +252,7 @@ def process_document(agent, document: Document):
         return result
     try:
         actual_answer_parsed = parse_answer(actual_answer)
-    except ValueError as e:
+    except (ValueError, TypeError) as e:
         print(e)
         result.error = e
         result.actual_answer = actual_answer
@@ -278,7 +279,7 @@ def process_document(agent, document: Document):
     return result
 
 
-def generate_reports(results, header={}, do_html=True, do_csv=True):
+def generate_reports(results, header, do_html=True, do_csv=True):
     """
     Wrapper around generating html and csv reports
 
@@ -288,8 +289,8 @@ def generate_reports(results, header={}, do_html=True, do_csv=True):
     """
 
     timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
-    filename_html = os.path.join("reports", f"report-{timestamp}.html")
-    filename_csv = os.path.join("reports", f"report-{timestamp}.csv")
+    filename_html = os.path.join("reports", f"report-{header.get('model_name')}-{timestamp}.html")
+    filename_csv = os.path.join("reports", f"report-{header.get('model_name')}-{timestamp}.csv")
     if do_html:
         generate_html_report(
             filename_html,

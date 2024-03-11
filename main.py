@@ -26,11 +26,11 @@ dotenv.load_dotenv()
 if __name__ == "__main__":
 
     config = {**os.environ}
-    number_of_docs = config.get("NO_OF_DOCUMENTS_TO_PROCESS", None)
+    number_of_docs = config.get("NO_OF_DOCUMENTS_TO_PROCESS", 0)
     verbose = config.get("VERBOSE")
 
     documents_to_process = get_documents(
-        document_ids=SAMPLE_DOCUMENTS, number_of_docs=number_of_docs
+        document_ids=SAMPLE_DOCUMENTS, number_of_docs=int(number_of_docs)
     )
 
     model_provider = config.get("MODEL_PROVIDER", "openai")
@@ -51,7 +51,7 @@ if __name__ == "__main__":
     generate_reports(
         results=results,
         header={
-            "model": llm.model_name,
+            "model_name": llm.model_name,
             "agent_name": agent.__class__.__name__,
             "description": agent.description
         }
