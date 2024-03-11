@@ -10,18 +10,28 @@
 ### run
 	- `poetry install`
 	- `mv sample.env .env`
-	- update .env manually
-	- when using Bedrock, setup aws cli
+	- update .env manually # see below
+		- (easy) when using openai, add OPENAI_API_KEY to .env
+		- when using Bedrock, setup aws cli and add credentials profile
 	- `python main.py`
+
+### providers
+	- openai
+	- bedrock
 	
+### models
+	- gpt-4
+	- amazon.titan-text-express-v1
+	- or another from from respective provider
+
 ### agents
 
-	- "simple"
-	- "agent_keeping_history"
-	- "agent_developer"
+	- simple
+	- agent_keeping_history
+	- agent_developer
 
 ### running with local model
 
-	- there is an option to run with a local model but ti is super slow
-	- also, it does not generate a report
+	- there is an option to run with a local model but it is super slow
+	- it does not generate a report either
 	- `run_with_local_model.py`

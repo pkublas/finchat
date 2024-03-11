@@ -28,7 +28,6 @@ class FinancialAnalysisChainWithHistory(LLMChain):
     def from_llm(cls, llm: BaseLLM, verbose: bool = True) -> LLMChain:
         analysis_prompt = """You work as financial analyst helping your company understand financial report.
 When asked about ratio, proportion, or change, you must provide your answer using percentage value.
-You must validate your answers using code.
 {context}
 Conversation history:
 {conversation_history}

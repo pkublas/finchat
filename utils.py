@@ -289,8 +289,8 @@ def generate_reports(results, header, do_html=True, do_csv=True):
     """
 
     timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
-    filename_html = os.path.join("reports", f"report-{header.get('model_name')}-{timestamp}.html")
-    filename_csv = os.path.join("reports", f"report-{header.get('model_name')}-{timestamp}.csv")
+    filename_html = os.path.join("reports", f"report-{timestamp}-{header.get('model_name')}-{header.get('agent_name')}.html")
+    filename_csv = os.path.join("reports", f"report-{timestamp}-{header.get('model_name')}-{header.get('agent_name')}.csv")
     if do_html:
         generate_html_report(
             filename_html,

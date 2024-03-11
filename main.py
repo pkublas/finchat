@@ -35,12 +35,12 @@ if __name__ == "__main__":
 
     model_provider = config.get("MODEL_PROVIDER", "openai")
     model_name = config.get("MODEL_NAME", "gtp-4")
-    agent = config.get("AGENT", "simple")
+    agent_name = config.get("AGENT", "simple")
 
-    print(f"model_provider={model_provider} | model_name={model_name} | agent={agent}")
+    print(f"model_provider={model_provider} | model_name={model_name} | agent={agent_name}")
 
     llm = PROVIDERS.get(model_provider)(model_name=model_name)
-    agent = AGENTS.get(agent)(llm=llm, verbose=verbose)
+    agent = AGENTS.get(agent_name)(llm=llm, verbose=verbose)
 
     results = []
     for document in documents_to_process:
@@ -52,7 +52,7 @@ if __name__ == "__main__":
         results=results,
         header={
             "model_name": llm.model_name,
-            "agent_name": agent.__class__.__name__,
+            "agent_name": agent_name,
             "description": agent.description
         }
     )
